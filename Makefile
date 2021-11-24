@@ -9,15 +9,30 @@
 #    Updated: 2021/08/26 10:51:28 by nle-bret         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+CFLAGS = -Wall -Wextra -Werror
+
+DEBUG ?= 0
+ifeq ($(DEBUG), 1)
+    CFLAGS += -g3 -fsanitize=address
+endif
+
 NAME = libft.a
 
-SRC = ft_putchar.c ft_swap.c ft_putstr.c ft_strlen.c ft_strcmp.c
+SRC = ft_isalnum.c\
+      ft_isprint.c\
+      ft_isalpha.c\
+      ft_memcpy.c\
+      ft_isascii.c\
+      ft_memset.c\
+      ft_strlen.c\
+      ft_bzero.c\
+      ft_isdigit.c\
+      ft_memmove.c
 
 OBJS = ${SRC:.c=.o}
 
 CC = gcc
-
-CFLAGS = -Wall -Wextra -Werror
 
 INCLUDE = includes
 
