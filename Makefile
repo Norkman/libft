@@ -30,7 +30,12 @@ SRC = ft_isalnum.c\
       ft_isdigit.c\
       ft_memmove.c\
       ft_strlcpy.c\
-      ft_strlcat.c
+      ft_strlcat.c\
+      ft_toupper.c\
+      ft_tolower.c\
+      ft_strchr.c\
+      ft_strrchr.c\
+      ft_strncmp.c
 
 OBJS = ${SRC:.c=.o}
 
