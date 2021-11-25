@@ -28,7 +28,9 @@ SRC = ft_isalnum.c\
       ft_strlen.c\
       ft_bzero.c\
       ft_isdigit.c\
-      ft_memmove.c
+      ft_memmove.c\
+      ft_strlcpy.c\
+      ft_strlcat.c
 
 OBJS = ${SRC:.c=.o}
 
