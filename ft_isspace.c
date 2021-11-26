@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nle-bret <nle-bret@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/26 07:59:45 by nle-bret          #+#    #+#             */
-/*   Updated: 2021/11/26 07:59:48 by nle-bret         ###   ########.fr       */
+/*   Created: 2021/11/26 15:45:04 by nle-bret          #+#    #+#             */
+/*   Updated: 2021/11/26 16:11:11 by nle-bret         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(int a)
+int	ft_isspace(const char c)
 {
-	if (a >= 0 && a <= 127)
+	char	c_tmp;
+
+	c_tmp = (char)c;
+	if (c_tmp == '\t' || c_tmp == '\n' || c_tmp == '\r'
+		|| c_tmp == '\v' || c_tmp == '\f' || c_tmp == ' ')
 		return (1);
 	return (0);
 }

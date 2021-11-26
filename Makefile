@@ -6,7 +6,7 @@
 #    By: nle-bret <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/23 22:03:57 by nle-bret          #+#    #+#              #
-#    Updated: 2021/08/26 10:51:28 by nle-bret         ###   ########.fr        #
+#    Updated: 2021/11/26 15:47:56 by nle-bret         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,13 @@ SRC = ft_isalnum.c\
       ft_tolower.c\
       ft_strchr.c\
       ft_strrchr.c\
-      ft_strncmp.c
+      ft_strncmp.c\
+      ft_memchr.c\
+      ft_memcmp.c\
+      ft_strnstr.c\
+      ft_atoi.c\
+      ft_isspace.c
+
 
 OBJS = ${SRC:.c=.o}
 
