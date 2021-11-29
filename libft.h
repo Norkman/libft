@@ -6,7 +6,7 @@
 /*   By: nle-bret <nle-bret@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 09:38:13 by nle-bret          #+#    #+#             */
-/*   Updated: 2021/11/26 17:38:53 by nle-bret         ###   ########.fr       */
+/*   Updated: 2021/11/29 13:15:41 by nle-bret         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,14 @@
 # define LIBFT_H
 # include <stddef.h>
 # include <stdlib.h>
+# include <stdio.h> // to remove before send !!!
 
 int		ft_isalpha(int a);
 int		ft_isdigit(int a);
 int		ft_isalnum(int a);
 int		ft_isascii(int a);
 int		ft_isprint(int a);
-int		ft_strlen(char *a);
+int		ft_strlen(const char *a);
 void	*ft_memset(void *s, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
@@ -39,4 +40,8 @@ int		ft_atoi(const char *nptr);
 int		ft_isspace(const char c);
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strdup(const char *s);
+char	*ft_strtrim(char const *s1, char const *set);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	**ft_split(char const *s, char c);
 #endif

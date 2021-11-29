@@ -6,7 +6,7 @@
 /*   By: nle-bret <nle-bret@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 09:25:36 by nle-bret          #+#    #+#             */
-/*   Updated: 2021/11/26 16:29:25 by nle-bret         ###   ########.fr       */
+/*   Updated: 2021/11/29 15:18:25 by nle-bret         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,21 @@ int	main(int argc, char **argv)
 	//char	str1[30] = "salut tu vas bien ?";
 	//char	str2[30] = "salut tu fas bien ?";
 	//assert(strncmp(str1, str2, n) - ft_strncmp(str1, str2, n) == 0);*/
-	printf("%d\n", ft_atoi(argv[1]));
-	printf("%d\n", atoi(argv[1]));
+	//printf("%d\n", ft_atoi(argv[1]));
+	//printf("%d\n", atoi(argv[1]));
+	//printf ("%s", ft_strtrim(argv[1], argv[2]));
+	//printf("%s", ft_strjoin(argv[1], argv[2]));
+	//printf ("%s", ft_substr(argv[1], 4, 5));
+	
+	char	**mat;
+	int	i;
+
+	mat = ft_split(argv[1], ' ');
+	i = 0;
+	while (mat[i])
+	{
+		printf("%s\n", mat[i]);
+		i++;
+	}
 	return (0);
 }
