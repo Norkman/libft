@@ -6,13 +6,13 @@
 /*   By: nle-bret <nle-bret@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 08:41:44 by nle-bret          #+#    #+#             */
-/*   Updated: 2021/11/29 11:10:11 by nle-bret         ###   ########.fr       */
+/*   Updated: 2021/11/30 14:55:43 by nle-bret         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_begin(char const *s1, char const *set)
+static int	ft_begin(char const *s1, char const *set)
 {
 	int	i;
 	int	len;
@@ -28,7 +28,7 @@ int	ft_begin(char const *s1, char const *set)
 	return (i);
 }
 
-int	ft_end(char const *s1, char const *set, int begin)
+static int	ft_end(char const *s1, char const *set, int begin)
 {
 	int	i;
 	int	len;
@@ -56,8 +56,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	begin = ft_begin(s1, set);
 	end = ft_end(s1, set, begin);
-	if (begin == end)
-		return ("");
+	if (begin >= end)
+		return (ft_strdup(""));
 	str = malloc(sizeof(*str) * (end - begin + 1));
 	if (str == NULL)
 		return (NULL);

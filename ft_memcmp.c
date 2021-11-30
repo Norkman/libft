@@ -6,7 +6,7 @@
 /*   By: nle-bret <nle-bret@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 10:28:10 by nle-bret          #+#    #+#             */
-/*   Updated: 2021/11/26 10:42:34 by nle-bret         ###   ########.fr       */
+/*   Updated: 2021/11/30 13:01:06 by nle-bret         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	tmp2 = (unsigned char *)s2;
 	while (i < n)
 	{
-		if (tmp1[i] == tmp2[i])
+		if (tmp1[i] != tmp2[i])
 			return (tmp1[i] - tmp2[i]);
 		i++;
 	}

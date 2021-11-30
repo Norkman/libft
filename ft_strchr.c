@@ -6,7 +6,7 @@
 /*   By: nle-bret <nle-bret@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 08:03:28 by nle-bret          #+#    #+#             */
-/*   Updated: 2021/11/26 08:03:30 by nle-bret         ###   ########.fr       */
+/*   Updated: 2021/11/30 13:13:37 by nle-bret         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ char	*ft_strchr(const char *s, int c)
 	i = 0;
 	while (s[i])
 	{
-		if (s[i] == c)
+		if ((unsigned char)s[i] == (unsigned char)c)
 			return ((char *)(s + i));
 		i++;
 	}
-	if (s[i] == c)
+	if ((unsigned char)s[i] == (unsigned char)c)
 		return ((char *)(s + i));
 	return (0);
 }

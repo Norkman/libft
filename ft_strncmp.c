@@ -6,7 +6,7 @@
 /*   By: nle-bret <nle-bret@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 08:04:14 by nle-bret          #+#    #+#             */
-/*   Updated: 2021/11/26 09:24:27 by nle-bret         ###   ########.fr       */
+/*   Updated: 2021/11/30 16:25:50 by nle-bret         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	size_t	i;
 
 	i = 0;
-	while (s1[i] == s2[i] && i < n && s1[i])
-	{
+	if (n == 0)
+		return (0);
+	while (s1[i] == s2[i] && i < n - 1 && s1[i])
 		i++;
-	}
 	return (s1[i] - s2[i]);
 }

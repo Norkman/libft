@@ -6,7 +6,7 @@
 #    By: nle-bret <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/23 22:03:57 by nle-bret          #+#    #+#              #
-#    Updated: 2021/11/29 13:16:02 by nle-bret         ###   ########.fr        #
+#    Updated: 2021/11/30 16:58:58 by nle-bret         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,10 +46,12 @@ SRC = ft_isalnum.c\
       ft_strtrim.c\
       ft_strjoin.c\
       ft_substr.c\
-      ft_split.c
+      ft_split.c\
+      ft_itoa.c
+
 OBJS = ${SRC:.c=.o}
 
-CC = gcc
+CC = clang
 
 INCLUDE = includes
 
