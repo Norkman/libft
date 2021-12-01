@@ -6,13 +6,24 @@
 /*   By: nle-bret <nle-bret@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 11:24:12 by nle-bret          #+#    #+#             */
-/*   Updated: 2021/11/26 17:42:03 by nle-bret         ###   ########.fr       */
+/*   Updated: 2021/12/01 07:52:58 by nle-bret         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_convert(char *str, int i, int num)
+static int	ft_isspace(const char c)
+{
+	char	c_tmp;
+
+	c_tmp = (char)c;
+	if (c_tmp == '\t' || c_tmp == '\n' || c_tmp == '\r'
+		|| c_tmp == '\v' || c_tmp == '\f' || c_tmp == ' ')
+		return (1);
+	return (0);
+}
+
+static int	ft_convert(char *str, int i, int num)
 {
 	while (i < ft_strlen(str) && ft_isdigit(str[i]))
 	{
