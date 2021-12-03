@@ -6,7 +6,7 @@
 /*   By: nle-bret <nle-bret@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/03 09:17:12 by nle-bret          #+#    #+#             */
-/*   Updated: 2021/12/03 15:58:14 by nle-bret         ###   ########.fr       */
+/*   Updated: 2021/12/03 17:13:24 by nle-bret         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*new_element;
 	t_list	*tmp_lst;
 
-	if (!f || !del || !lst)
-		return (NULL);
 	new_lst = NULL;
 	tmp_lst = lst;
 	while (tmp_lst)
