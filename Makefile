@@ -6,7 +6,7 @@
 #    By: nle-bret <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/23 22:03:57 by nle-bret          #+#    #+#              #
-#    Updated: 2021/12/03 12:30:19 by nle-bret         ###   ########.fr        #
+#    Updated: 2021/12/03 15:09:20 by nle-bret         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,9 +74,9 @@ B_OBJS	= ${BONUS:.c=.o}
 
 CC		= clang
 
-#so:
-#    $(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
-#    gcc -nostartfiles -shared -o libft.so $(OBJS)
+so:
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS) $(BONUS)
+	gcc -nostartfiles -shared -o libft.so $(OBJS) $(B_OBJS)
 
 ${NAME}: ${OBJS}
 	ar rc ${NAME} ${OBJS}

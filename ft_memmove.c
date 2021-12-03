@@ -6,7 +6,7 @@
 /*   By: nle-bret <nle-bret@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 08:01:21 by nle-bret          #+#    #+#             */
-/*   Updated: 2021/11/26 08:01:23 by nle-bret         ###   ########.fr       */
+/*   Updated: 2021/12/03 13:03:35 by nle-bret         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	char		*dst2;
 	char		*src2;
 
+	if (!dst || !src)
+		return (NULL);
 	dst2 = (char *)dst;
 	src2 = (char *)src;
 	if (dst2 > src2)

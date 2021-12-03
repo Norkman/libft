@@ -6,7 +6,7 @@
 /*   By: nle-bret <nle-bret@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 17:09:42 by nle-bret          #+#    #+#             */
-/*   Updated: 2021/11/26 17:36:29 by nle-bret         ###   ########.fr       */
+/*   Updated: 2021/12/03 13:27:20 by nle-bret         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,14 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*mat;
 
-	mat = malloc(nmemb * size);
-	if (nmemb == 0)
+	if (nmemb == 0 || size == 0)
 	{
-		return (mat);
+		nmemb = 1;
+		size = 1;
 	}
+	mat = malloc(nmemb * size);
+	if (mat == NULL)
+		return (NULL);
 	ft_bzero(mat, size * nmemb);
 	return (mat);
 }

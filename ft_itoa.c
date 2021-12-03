@@ -6,7 +6,7 @@
 /*   By: nle-bret <nle-bret@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 16:57:23 by nle-bret          #+#    #+#             */
-/*   Updated: 2021/11/30 18:19:21 by nle-bret         ###   ########.fr       */
+/*   Updated: 2021/12/03 13:14:18 by nle-bret         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,12 +55,16 @@ char	*ft_itoa(int num)
 	if (n >= 0)
 	{
 		str = malloc(sizeof(*str) * (len + 1));
+		if (!str)
+			return (NULL);
 		ft_conststr(str, n, len);
 		str[len] = '\0';
 	}
 	else
 	{
 		str = malloc(sizeof(*str) * (len + 2));
+		if (!str)
+			return (NULL);
 		str[0] = '-';
 		ft_conststr(str + 1, -n, len);
 		str[len + 1] = '\0';
