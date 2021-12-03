@@ -6,7 +6,7 @@
 #    By: nle-bret <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/23 22:03:57 by nle-bret          #+#    #+#              #
-#    Updated: 2021/12/03 10:52:30 by nle-bret         ###   ########.fr        #
+#    Updated: 2021/12/03 12:30:19 by nle-bret         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,7 +68,7 @@ BONUS	= ft_lstnew.c\
 		  ft_lstiter.c\
 		  ft_lstmap.c
 
-OBJS	= ${SRCS.c=.o}
+OBJS	= ${SRCS:.c=.o}
 
 B_OBJS	= ${BONUS:.c=.o}
 
