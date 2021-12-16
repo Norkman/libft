@@ -63,6 +63,8 @@ char	**ft_split(char const *s, char c)
 	int		word;
 	char	**mat;
 
+	if (!s)
+		return (NULL);
 	mat = NULL;
 	word = ft_countword(s, c);
 	mat = ft_constmat(word, s, c);

@@ -72,7 +72,7 @@ OBJS	= ${SRCS:.c=.o}
 
 B_OBJS	= ${BONUS:.c=.o}
 
-CC		= clang
+CC		= cc
 
 #so:
 #	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS) $(BONUS)
