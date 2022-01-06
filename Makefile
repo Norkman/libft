@@ -6,7 +6,7 @@
 #    By: nle-bret <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/23 22:03:57 by nle-bret          #+#    #+#              #
-#    Updated: 2022/01/05 10:39:12 by nle-bret         ###   ########.fr        #
+#    Updated: 2022/01/06 14:23:12 by nle-bret         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -87,7 +87,7 @@ bonus:    ${OBJS} ${B_OBJS}
 	ar rc ${NAME} ${OBJS} ${B_OBJS}
 
 clean:
-	rm -f ${OBJS}
+	rm -f ${OBJS} ${B_OBJS}
 
 fclean:	clean
 	rm -f ${NAME}
