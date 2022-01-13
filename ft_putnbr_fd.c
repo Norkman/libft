@@ -6,7 +6,7 @@
 /*   By: nle-bret <nle-bret@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 08:34:24 by nle-bret          #+#    #+#             */
-/*   Updated: 2021/12/01 10:37:31 by nle-bret         ###   ########.fr       */
+/*   Updated: 2022/01/13 17:11:15 by nle-bret         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,17 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	if (n == -2147483648)
-		ft_putstr_fd("-2147483648", fd);
-	else
-	{
-		if (n < 0)
-		{				
-			ft_putchar_fd('-', fd);
-			n = -n;
-		}			
-		if (n >= 9)
-			ft_putnbr_fd(n / 10, fd);
-		ft_putchar_fd(n % 10 + '0', fd);
-	}
+	long int	nbr;
+	int			w;
+
+	nbr = n;
+	if (nbr < 0)
+	{				
+		write(fd, "-", 1);
+		nbr = -nbr;
+	}			
+	if (nbr / 10)
+		ft_putnbr_fd(nbr / 10, fd);
+	w = nbr % 10 + '0';
+	write(fd, &w, 1);
 }
